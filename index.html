@@ -52,7 +52,9 @@
                 id="user-name"
                 class="popup__input popup__input_type_name"
                 placeholder="Имя"
+                data-error-message="Разрешены только латинские, кириллические буквы, знаки дефиса и пробелы"
               />
+              <span class="popup__error" id="user-name-error"></span>
             </label>
             <label class="popup__label">
               <input
@@ -62,6 +64,7 @@
                 class="popup__input popup__input_type_description"
                 placeholder="Занятие"
               />
+              <span class="popup__error" id="user-description-error"></span>
             </label>
             <button
               type="submit"
@@ -85,7 +88,9 @@
                 id="place-name"
                 class="popup__input popup__input_type_card-name"
                 placeholder="Название"
+                data-error-message="Разрешены только латинские, кириллические буквы, знаки дефиса и пробелы"
               />
+              <span class="popup__error" id="place-name-error"></span>
             </label>
             <label class="popup__label">
               <input
@@ -95,6 +100,7 @@
                 class="popup__input popup__input_type_url"
                 placeholder="Ссылка на картинку"
               />
+              <span class="popup__error" id="place-link-error"></span>
             </label>
             <button
               type="submit"
@@ -142,6 +148,7 @@
                 class="popup__input popup__input_type_avatar"
                 placeholder="Ссылка на изображение"
               />
+              <span class="popup__error" id="user-avatar-error"></span>
             </label>
             <button
               type="submit"
