@@ -4,5 +4,11 @@ export default defineConfig({
   server: {
     open: true,
   },
-  base: './',
+  
+  build: {
+    outDir: "dist",
+    emptyOutDir: true, 
+  },
+
+  base: "/mesto-ad/",
 });
