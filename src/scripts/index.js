@@ -49,7 +49,6 @@ const statsInfoList = statsModalWindow.querySelector(".popup__info");
 const statsPopularTitle = statsModalWindow.querySelector(".popup__text");
 const statsPopularList = statsModalWindow.querySelector(".popup__list");
 
-// Шаблоны
 const definitionTemplate = document.getElementById("popup-info-definition-template");
 const userPreviewTemplate = document.getElementById("popup-info-user-preview-template");
 
@@ -225,7 +224,6 @@ const handleOpenStats = () => {
         });
       });
       
-      // Находим чемпиона по лайкам
       let maxLikes = 0;
       let champion = "Нет данных";
       
@@ -309,7 +307,6 @@ openCardFormButton.addEventListener("click", () => {
 
 logoButton.addEventListener("click", handleOpenStats);
 
-// Настраиваем обработчики закрытия попапов
 const allPopups = document.querySelectorAll(".popup");
 allPopups.forEach((popup) => {
   setCloseModalWindowEventListeners(popup);
@@ -327,7 +324,6 @@ const validationSettings = {
 
 enableValidation(validationSettings);
 
-// Загружаем данные при старте приложения
 Promise.all([getCardList(), getUserInfo()])
   .then(([cards, userData]) => {
     // Сохраняем ID текущего пользователя
@@ -338,10 +334,8 @@ Promise.all([getCardList(), getUserInfo()])
     profileDescription.textContent = userData.about;
     profileAvatar.style.backgroundImage = `url(${userData.avatar})`;
     
-    // Очищаем контейнер с карточками
     placesWrap.innerHTML = "";
     
-    // Отображаем карточки
     cards.forEach((cardData) => {
       const cardElement = createCardElement(
         cardData,
