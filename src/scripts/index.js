@@ -247,8 +247,8 @@ const handleOpenStats = () => {
       statsTitle.textContent = "Статистика карточек";
       
       // Очищаем предыдущие данные
-      statsInfoList.innerHTML = "";
-      statsPopularList.innerHTML = "";
+      statsInfoList.textContent = "";
+      statsPopularList.textContent = "";
       
       // Добавляем статистику
       const stats = [
@@ -334,7 +334,7 @@ Promise.all([getCardList(), getUserInfo()])
     profileDescription.textContent = userData.about;
     profileAvatar.style.backgroundImage = `url(${userData.avatar})`;
     
-    placesWrap.innerHTML = "";
+    placesWrap.textContent = "";;
     
     cards.forEach((cardData) => {
       const cardElement = createCardElement(
